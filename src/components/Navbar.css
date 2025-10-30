@@ -39,12 +39,15 @@
 
 .nav-menu {
   display: flex;
+  align-items: center; /* Align items vertically */
   list-style: none;
   text-align: center;
 }
 
 .nav-item {
-  height: 80px;
+  height: 80px; /* Full height for link alignment */
+  display: flex;
+  align-items: center;
 }
 
 .nav-item a {
@@ -79,19 +82,142 @@
   background: var(--accent-color);
 }
 
+
+/* --- UPDATED BUTTON STYLES --- */
+
+/* For the "Contact" button */
 .nav-contact-btn {
-  background-color: var(--accent-color);
-  color: var(--background-color) !important; /* Override other styles */
+  color: var(--accent-color) !important; /* Set font color to accent */
+  font-weight: bold;
+  background: transparent !important;
+  padding: 0 1rem !important;
+  margin-left: 0.5rem;
+  border-radius: 0;
+  height: auto; /* Override default 100% */
+  transition: color 0.3s ease;
+}
+
+.nav-contact-btn:hover {
+  color: var(--text-light) !important; /* Brighter color on hover */
+}
+
+/* For the "Resume" button */
+.nav-resume-btn {
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--text-color);
   font-weight: bold;
   padding: 8px 20px !important;
   border-radius: 50px;
   margin-left: 1rem;
-  height: auto;
+  height: auto; /* Override default 100% */
   transition: all 0.3s ease;
 }
 
-.nav-contact-btn:hover {
-  background-color: var(--text-light);
+.nav-resume-btn:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--background-color);
 }
 
-/* TODO: Add styles for mobile menu later */
+
+/* --- MOBILE MENU STYLES --- */
+
+/* Hamburger Icon */
+.mobile-menu-icon {
+  display: none; /* Hidden on desktop */
+  cursor: pointer;
+}
+
+.icon-line {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-light);
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger to 'X' animation */
+.icon-line.line-1 {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.icon-line.line-2 {
+  opacity: 0;
+}
+.icon-line.line-3 {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+
+/* Media Query for mobile */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 80px); /* Full height minus navbar */
+    position: absolute;
+    top: 80px; /* Position below navbar */
+    left: -100%; /* Off-screen by default */
+    opacity: 1;
+    transition: all 0.5s ease;
+    background: var(--surface-color);
+  }
+
+  .nav-menu.active {
+    left: 0; /* Slide in */
+  }
+
+  .nav-item {
+    width: 100%;
+    height: auto; /* Let content define height */
+    padding: 1rem 0;
+  }
+  
+  .nav-item:not(.nav-item-btn) {
+    border-bottom: 1px solid #444; /* Separator lines */
+  }
+
+  .nav-item a {
+    padding: 1.5rem 1rem;
+    width: 100%;
+    justify-content: center; /* Center text */
+    height: auto;
+  }
+  
+  /* Underline for active link on mobile */
+  .nav-item a.active::after {
+    display: none; /* Remove desktop underline */
+  }
+  
+  /* Make buttons stack nicely on mobile */
+  .nav-item-btn {
+    width: 100%;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .nav-resume-btn, .nav-contact-btn {
+    width: 80%;
+    padding: 12px 20px !important;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  
+  .nav-contact-btn {
+    color: var(--accent-color) !important;
+  }
+  
+  .nav-resume-btn {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  .nav-resume-btn:hover {
+    color: var(--background-color);
+  }
+
+  .mobile-menu-icon {
+    display: block; /* Show hamburger icon */
+  }
+}
