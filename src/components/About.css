@@ -1,0 +1,117 @@
+/* src/components/About.css */
+.about-section {
+  background-color: var(--surface-color); /* Slightly lighter background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+/* Creates the accent underline */
+.about-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.about-image {
+  flex: 1;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid var(--accent-color);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  flex: 1.5; /* Give the text more space */
+  max-width: 600px;
+}
+
+.about-text h3 {
+  font-size: 1.8rem;
+  color: var(--text-light);
+}
+
+.about-text .profile-summary {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-light);
+  border-left: 3px solid var(--accent-color);
+  padding-left: 15px;
+}
+
+.about-highlights {
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.highlight-item {
+  font-size: 0.95rem;
+}
+.highlight-item strong {
+  color: var(--accent-color);
+  margin-right: 5px;
+}
+
+.cta-button {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-family: 'Raleway', sans-serif;
+  transition: all 0.3s ease;
+  display: inline-block; /* So it respects padding */
+  margin-top: 15px;
+}
+
+.cta-button:hover {
+  background-color: var(--text-light);
+  color: var(--background-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+
+  .about-text .profile-summary {
+    text-align: left;
+  }
+
+  .about-highlights {
+    justify-content: center;
+  }
+}

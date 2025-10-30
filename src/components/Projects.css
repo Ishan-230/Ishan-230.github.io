@@ -1,0 +1,120 @@
+/* src/components/Projects.css */
+.projects-section {
+  background-color: var(--background-color); /* Dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.projects-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+.projects-grid {
+  display: grid;
+  /* Responsive grid: 1 column small, 2 medium, 3 large */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.project-card {
+  background: var(--surface-color);
+  border-radius: 10px;
+  overflow: hidden; /* To keep image corners rounded */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease; /* For the hover shadow */
+}
+
+.project-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05); /* Zoom image on hover */
+}
+
+/* Placeholder for projects without an image */
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.image-placeholder span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+.project-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Makes all cards equal height */
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Pushes tags/links to the bottom */
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tag {
+  background: #444;
+  color: var(--accent-color);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-links a {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+.project-links a:hover {
+  color: var(--text-light);
+}

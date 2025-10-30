@@ -1,0 +1,97 @@
+/* src/components/Navbar.css */
+.navbar {
+  background: transparent; /* Transparent by default */
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  position: fixed; /* Stick to the top */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: var(--background-color); /* Solid background on scroll */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1600px;
+  padding: 0 8%;
+}
+
+.nav-logo .logo-link {
+  color: var(--text-light);
+  font-size: 1.8rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-item a {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  position: relative; /* For the underline effect */
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: var(--accent-color);
+}
+
+/* Active link style from react-scroll */
+.nav-item a.active {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Underline effect for active link */
+.nav-item a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 1rem;
+  right: 1rem;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.nav-contact-btn {
+  background-color: var(--accent-color);
+  color: var(--background-color) !important; /* Override other styles */
+  font-weight: bold;
+  padding: 8px 20px !important;
+  border-radius: 50px;
+  margin-left: 1rem;
+  height: auto;
+  transition: all 0.3s ease;
+}
+
+.nav-contact-btn:hover {
+  background-color: var(--text-light);
+}
+
+/* TODO: Add styles for mobile menu later */

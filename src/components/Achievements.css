@@ -1,0 +1,113 @@
+/* src/components/Achievements.css */
+.achievements-section {
+  background-color: var(--background-color); /* Dark background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px; /* Add extra padding at the bottom */
+}
+
+.achievements-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.achievements-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+.achievements-container {
+  width: 100%;
+}
+
+.achievement-category {
+  margin-bottom: 50px;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  color: var(--text-light);
+  border-bottom: 2px solid var(--surface-color);
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: grid;
+  /* Responsive grid: 1 column small, 2 medium */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+.achievement-card {
+  background: var(--surface-color);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.achievement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.achievement-card h4 {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+  flex-grow: 1; /* Makes cards in a row equal height */
+}
+
+.achievement-card p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Specific Card Styles */
+.paper-card {
+  border-left: 4px solid var(--accent-color); /* Yellow */
+}
+
+.sim-card {
+  border-left: 4px solid #ff5733; /* Orange/Red */
+}
+
+.cert-card {
+  border-left: 4px solid #8be9fd; /* Light Blue */
+}
+
+.sim-card .card-date {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.cert-card .cert-issuer {
+  font-style: italic;
+  color: var(--text-color);
+  margin: 0;
+}
+
+/* Link (commented out in JSX) */
+.paper-link, .cert-link {
+  color: var(--accent-color);
+  font-weight: bold;
+  text-decoration: underline;
+  margin-top: auto; /* Pushes link to the bottom */
+  cursor: pointer;
+}
+.paper-link:hover, .cert-link:hover {
+  color: var(--text-light);
+}

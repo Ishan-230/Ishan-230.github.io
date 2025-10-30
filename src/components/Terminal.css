@@ -1,0 +1,122 @@
+/* src/components/Terminal.css */
+.terminal-widget {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+}
+
+.terminal-toggle-btn {
+  width: 60px;
+  height: 60px;
+  background: var(--accent-color);
+  color: var(--background-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.terminal-toggle-btn svg {
+  width: 30px;
+  height: 30px;
+}
+
+.terminal-window {
+  width: 450px;
+  height: 300px;
+  background: #0a0a0a;
+  border: 2px solid var(--accent-color);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.terminal-header {
+  background: var(--accent-color);
+  color: var(--background-color);
+  padding: 5px 10px;
+  font-family: 'Fira Code', monospace;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.terminal-close-btn {
+  background: none;
+  border: none;
+  color: var(--background-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.terminal-history {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding: 10px;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+
+.history-line {
+  display: flex;
+  white-space: pre-wrap; /* Allows wrapping of long lines */
+  word-break: break-all; /* Breaks long words */
+}
+
+.history-line.input {
+  color: var(--text-color);
+}
+
+.history-line.output {
+  color: #00ff00; /* Main green color */
+}
+
+.history-line pre {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+}
+
+.prompt {
+  color: #00ff00;
+  margin-right: 8px;
+}
+
+.terminal-input-form {
+  display: flex;
+  background: #0a0a0a;
+  padding: 5px 10px 10px 10px;
+  border-top: 1px solid #333;
+}
+
+.terminal-input {
+  flex-grow: 1;
+  background: none;
+  border: none;
+  color: #00ff00;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+}
+.terminal-input:focus {
+  outline: none;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .terminal-widget,
+  .terminal-window {
+    bottom: 15px;
+    right: 15px;
+    width: calc(100% - 30px);
+  }
+}

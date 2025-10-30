@@ -1,0 +1,153 @@
+/* src/components/Experience.css */
+.experience-section {
+  background-color: var(--surface-color); /* Light background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 60px; /* More space for timeline */
+  position: relative;
+}
+
+.experience-section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: var(--accent-color);
+  margin: 10px auto 0;
+}
+
+/* The main timeline container */
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* The vertical line running down the middle */
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #444;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 10px 40px;
+  margin-bottom: 40px;
+}
+
+/* Position items on the left or right */
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* The circle on the timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -10px;
+  top: 30px;
+  background-color: var(--accent-color);
+  border: 4px solid var(--surface-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+.timeline-item:nth-child(even)::after {
+  left: -10px;
+}
+
+/* The content box */
+.timeline-content {
+  background: var(--background-color);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.timeline-tag {
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 20px;
+  color: var(--background-color);
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.timeline-tag.experience {
+  background-color: var(--accent-color);
+}
+.timeline-tag.education {
+  background-color: #ff5733; /* Use heading color for contrast */
+}
+
+.timeline-content time {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+  font-size: 1.3rem;
+  color: var(--text-light);
+  margin-bottom: 5px;
+}
+
+.timeline-content .timeline-subtitle {
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  list-style-type: '» ';
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+.timeline-content li {
+  font-size: 0.95rem;
+  padding-left: 5px;
+  margin-bottom: 5px;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 20px; /* Move line to the left */
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px; /* Add space for line */
+    padding-right: 15px;
+    left: 0 !important; /* Stack all on the left */
+  }
+
+  .timeline-item::after {
+    left: 10px; /* Move circle to the line */
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0; /* Stack all on the left */
+  }
+}
