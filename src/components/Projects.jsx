@@ -9,6 +9,7 @@ import './Projects.css'; // We'll create this next
 import imgPasswordGen from '../assets/password-generator.png';
 import imgEncryption from '../assets/image-encryption.png';
 import imgTaskManager from '../assets/task-manager.png';
+import imgDockShield from '../assets/DockShield.png';
 
 // --- Project Data (Synthesized from Resume & Bootstrap HTML) ---
 // You can easily edit this array later with your content changes
