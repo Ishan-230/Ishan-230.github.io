@@ -14,6 +14,13 @@ import imgTaskManager from '../assets/task-manager.png';
 // You can easily edit this array later with your content changes
 const projectsData = [
   {
+    title: "DockShield",
+    description: "Automated Secure Server Deployment with Docker Integration",
+    tags: ["Bash", "Docker", "Cron", "Rsync", "Linux", "Security"],
+    image: imgDockShield, // No image provided, we'll use a placeholder
+    githubLink: "https://github.com/Ishan-230"
+  },
+  {
     title: "Automated Synchronous Backup",
     description: "Shell-based automation for local-to-cloud file sync using rsync, cron jobs, and real-time logging; deployed on AWS EC2.",
     tags: ["Bash", "AWS EC2", "Cron", "Rsync", "Linux"],
@@ -50,7 +57,7 @@ const projectsData = [
   },
   {
     title: "Security Control Monitoring",
-    description: "Published award-winning research paper on AI/ML-powered auditing frameworks for cloud environments.",
+    description: "Explores reinforcement learning models for dynamic, real-time threat detection in cloud infrastructures.",
     tags: ["Research", "AI/ML", "Cloud", "Security"],
     image: null,
     githubLink: "https://github.com/Ishan-230"

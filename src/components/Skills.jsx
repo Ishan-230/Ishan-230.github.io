@@ -9,9 +9,7 @@ const skillCategories = [
   {
     title: "Languages & Core",
     skills: [
-      "Python", 
-      "Java", 
-      "C/C++", 
+      "Python",
       "Bash", 
       "Problem Solving", 
       "Logical Thinking"
@@ -22,7 +20,8 @@ const skillCategories = [
     skills: [
       "Prompt Engineering", // Added
       "Jupyter Notebooks",  // Moved & Confirmed 
-      "Data Visualization"    // From Resume 
+      "Data Visualization",
+      "AI Models"    // From Resume 
     ]
   },
   {

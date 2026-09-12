@@ -8,7 +8,7 @@ const timelineData = [
   {
     type: "Education",
     date: "July 2023 - July 2026",
-    title: "Bachelor of Computer Applications (BCA), Honors in Data Science",
+    title: "Bachelor of Computer Applications (BCA), Honors in Cloud Computing",
     subtitle: "Jagran Lakecity University, Bhopal, MP",
     details: [
       "CGPA: 8.6",

@@ -46,7 +46,7 @@ const About = () => {
           
           {/* --- UPDATED --- */}
           <p className="profile-summary">
-            A motivated and proactive Developer and Computer Application student. 
+            A motivated and proactive Developer and Computer Application graduate. 
             My core passions are Cloud Computing, Cybersecurity, AI/ML, and building
             robust, real-world applications.
           </p>
@@ -55,16 +55,16 @@ const About = () => {
           <p>
             With strong problem-solving skills, I enjoy automating infrastructure, 
             enhancing security protocols, and applying AI to complex challenges. 
-            Proficient in Python, Java, C/C++, and Bash.
+            Proficient in Python and Bash.
           </p>
           
           {/* --- UPDATED --- */}
           <div className="about-highlights">
             <div className="highlight-item">
-              <strong>Core Focus:</strong> Dev, Cloud, Security, & AI
+              <strong>Core Focus:</strong> Dev, Cloud, Security, AI
             </div>
             <div className="highlight-item">
-              <strong>Languages:</strong> Python, Java, C/C++, Bash
+              <strong>Languages:</strong> Python, Bash
             </div>
           </div>
           
