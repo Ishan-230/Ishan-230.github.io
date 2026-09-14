@@ -31,7 +31,7 @@ const Contact = () => {
 
     // --- ⚠️ IMPORTANT: REPLACE WITH YOUR KEYS ---
     const SERVICE_ID = 'service_zeeqcdp';
-    const TEMPLATE_ID = 'template_97q0v3t';
+    const TEMPLATE_ID = 'template_i4ophxb';
     const PUBLIC_KEY = 'eoJxqN8LFhLqDGLng';
     // ------------------------------------------
 
