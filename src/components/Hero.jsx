@@ -52,6 +52,9 @@ const Hero = () => {
           <a href="https://linkedin.com/in/ishan-joshi-3351a1288" target="_blank" rel="noopener noreferrer">
             LinkedIn
           </a>
+          <a href="https://discord.gg/xbH8dBU5" target="_blank" rel="noopener noreferrer">
+            Discord
+          </a>
         </motion.div>
       </motion.div>
     </section>
